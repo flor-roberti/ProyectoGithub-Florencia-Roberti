@@ -11,25 +11,154 @@
  <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="Styles.css">
 
-<style>
+ <style>
+    :root {
+      --color-primario: #3a6073;
+      --color-secundario: #5781bd;
+      --color-hover: #8cabb9;
+      --fondo: #f4f6fa;
+      --color-texto: #333;
+      --color-articulo: #d7ecf9;
+    }
 
-section {
-    height: 600px;
-    width: 79%;
-    display: inline-block;
-    background-color: #4ea0a0;
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--fondo);
+      color: var(--color-texto);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--color-primario);
+      margin: 2rem 0 1rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 1rem auto;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 5%;
+      align-items: stretch;
+    }
+
+    aside {
+  background-color: var(--color-primario); /* #3a6073 */
+      padding: 2rem 1.5rem;
+      border-radius: 12px;
+      width: 250px;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .nav-secundario ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-secundario li {
+      margin: 2rem 0; 
+    }
+
+   .nav-secundario a {
+  display: block;
+  padding: 1rem 0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-h2 {
-    font-family: ‘Boldonse‘, system-ui; 
-    font-weight: 150;
-    font-size:15px;
-    text-align: center;
- }
+    .nav-secundario a:hover {
+      color: var(--color-hover);
+    }
 
+    section {
+      background-color: var(--color-articulo);
+      padding: 2rem;
+      flex: 1;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
+    iframe {
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      max-width: 100%;
+    }
 
-</style>
+    footer {
+      background-color: var(--color-primario);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .nav-principal {
+      background-color: var(--color-primario);
+      padding: 1.2rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-principal ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-principal li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-principal li a:hover {
+      color: var(--color-hover);
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      aside, section {
+        width: 100%;
+      }
+
+      iframe {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+  
 </head>
 
 <body> 
