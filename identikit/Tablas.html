@@ -8,64 +8,150 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Styles.css">
+
   <style>
-  table {
-  width: 90%;
-  margin: 2rem auto;
-  table-layout: fixed; /* 
-  border-collapse: separate;
-  border-spacing: 0 2rem;
-}
+    /* VARIABLES */
+    :root {
+      --color-primario: #3a6073;
+      --color-secundario: #5781bd;
+      --color-hover: #8cabb9;
+      --fondo: #d7ecf8;
+      --color-texto: #333;
+      --color-articulo: #ffffff;
+      --fuente-titulo: 'Playfair Display', serif;
+      --fuente-parrafo: 'Roboto', sans-serif;
+      --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+      --radio: 10px;
+    }
 
-td {
-  vertical-align: top;
-  padding: 1rem;
-  background-color: var(--color-articulo);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-}
+    body {
+      margin: 0;
+      font-family: var(--fuente-parrafo);
+      background-color: var(--fondo);
+      color: var(--color-texto);
+    }
 
-td h2,
-td p {
-  text-align: center;
-}
+    h1 {
+      font-family: var(--fuente-titulo);
+      text-align: center;
+      color: var(--color-primario);
+      margin: 2rem 0;
+      font-size: 2.5rem;
+    }
 
-img.imagen-viva {
-  display: block;
-  margin: 1rem auto;
-  max-width: 280px; 
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* NAV PRINCIPAL */
+    .nav-principal {
+      background-color: var(--color-primario);
+      padding: 1.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: var(--sombra);
+    }
 
-img.imagen-viva:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-}
+    .nav-principal ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Responsive: apila las celdas en móvil */
-@media (max-width: 768px) {
-  table, tr, td {
-    display: block;
-    width: 100%;
-  }
+    .nav-principal li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
 
-  td {
-    margin-bottom: 1.5rem;
-  }
+    .nav-principal li a:hover {
+      color: var(--color-hover);
+    }
 
-  img.imagen-viva {
-    max-width: 90%;
-  }
-}
+    /* TABLA DESTINOS */
+    table {
+      width: 90%;
+      margin: 2rem auto;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 0 2rem;
+    }
 
+    td {
+      vertical-align: top;
+      padding: 1rem;
+      background-color: var(--color-articulo);
+      border-radius: var(--radio);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    td h2 {
+      font-family: var(--fuente-titulo);
+      color: var(--color-primario);
+      font-size: 1.6rem;
+    }
+
+    td h2,
+    td p {
+      text-align: center;
+    }
+
+    img.imagen-viva {
+      display: block;
+      margin: 1rem auto;
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radio);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img.imagen-viva:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--color-primario);
+      height: 50px;
+      text-align: center;
+      color: white;
+      line-height: 50px;
+      margin-top: 3rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-principal {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-principal ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      table, tr, td {
+        display: block;
+        width: 100%;
+      }
+
+      td {
+        margin-bottom: 1.5rem;
+      }
+
+      img.imagen-viva {
+        max-width: 90%;
+      }
+    }
   </style>
 </head>
+
 <body>
   <nav class="nav-principal">
     <ul>
@@ -121,7 +207,7 @@ img.imagen-viva:hover {
   </table>
 
   <footer>
-    <p>&copy; 2025 - Florencia Roberti | All rights reserved </p>
+    <p>&copy; 2025 - Florencia Roberti | All rights reserved</p>
   </footer>
 </body>
 </html>
