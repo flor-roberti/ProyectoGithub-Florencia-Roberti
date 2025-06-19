@@ -12,6 +12,7 @@ h1 {
     font-weight: bold;
     font-size:20px;
  }
+
 nav {
             display: flex;
         }
@@ -51,27 +52,10 @@ nav {
                 text-align: center;
             }
              }
- nav {
-  display: flex;
-  align-items: center;        
-  justify-content: center;    
-  background-color: #4ea0a0;
-  height: 100px;
-  padding: 10px 0;
-  gap: 20px;                   
-}
 
 nav img {
   height: auto;                
   margin-left: 10px;
-}
-
-ul {
-  display: flex;           
-  gap: 80px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 :root {
