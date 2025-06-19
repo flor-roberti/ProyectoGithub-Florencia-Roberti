@@ -10,64 +10,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Styles.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--fondo);
-      color: var(--color-texto);
-    }
+  table {
+  width: 90%;
+  margin: 2rem auto;
+  table-layout: fixed; /* 
+  border-collapse: separate;
+  border-spacing: 0 2rem;
+}
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      color: var(--color-primario);
-      margin: 2rem 0;
-    }
-
-    table {
-      width: 90%;
-      margin: 2rem auto;
-      border-collapse: separate;
-      border-spacing: 0 2rem;
-    }
-
-   td {
+td {
   vertical-align: top;
   padding: 1rem;
   background-color: var(--color-articulo);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center; /* 
+  text-align: center;
 }
 
 td h2,
 td p {
-  text-align: center; 
+  text-align: center;
 }
 
-td img {
-  display: block;       
-  margin: 1.5rem auto;   
-}
-
-    img.imagen-viva {
-  max-width: 100px;
+img.imagen-viva {
   display: block;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
+  max-width: 280px; 
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-    @media (max-width: 768px) {
-      table, tr, td {
-        display: block;
-        width: 100%;
-      }
 
-      td {
-        margin-bottom: 2rem;
-      }
-    }
+img.imagen-viva:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive: apila las celdas en móvil */
+@media (max-width: 768px) {
+  table, tr, td {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    margin-bottom: 1.5rem;
+  }
+
+  img.imagen-viva {
+    max-width: 90%;
+  }
+}
+
   </style>
 </head>
 <body>
