@@ -7,7 +7,7 @@
   <link rel="icon" href="Iconos/Icono avión" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="Styles.css">
   <style>
     :root {
@@ -24,47 +24,58 @@
       font-family: 'Roboto', sans-serif;
       background-color: var(--fondo);
       color: var(--color-texto);
+      text-align: center;
     }
 
     h1 {
-      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
       color: var(--color-primario);
-      text-align: center;
       margin: 2rem 0 1rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 1rem auto;
     }
 
     main {
       display: flex;
+      justify-content: center;
       gap: 2rem;
       padding: 1rem 5%;
+      align-items: stretch;
     }
 
     aside {
       background-color: var(--color-secundario);
+      color: white;
       padding: 1.5rem;
       border-radius: 12px;
-      color: white;
       width: 250px;
       min-width: 200px;
-      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .nav-secundario ul {
       list-style: none;
       padding: 0;
-      margin: 0 0 1rem;
+      margin: 0;
     }
 
     .nav-secundario li {
-      margin-bottom: 1rem;
+      margin: 1rem 0;
     }
 
     .nav-secundario a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
       font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
 
     .nav-secundario a:hover {
@@ -77,13 +88,9 @@
       flex: 1;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     iframe {
@@ -100,7 +107,7 @@
       margin-top: 2rem;
     }
 
-    /* NAV PRINCIPAL (reutilizado) */
+    /* NAV PRINCIPAL */
     .nav-principal {
       background-color: var(--color-primario);
       padding: 1.2rem 1rem;
@@ -136,12 +143,13 @@
         flex-direction: column;
       }
 
-      aside {
+      aside, section {
         width: 100%;
       }
 
-      section {
+      iframe {
         width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -171,7 +179,7 @@
     </aside>
 
     <section>
-      <h1>Bariloche – Asombrosa ciudad suizo-alemana de Argentina</h1>
+      <h1>Bariloche: ciudad suizo-alemana de Argentina</h1>
       <h2>
         Este video muestra lo mejor de San Carlos de Bariloche, desde sus paisajes de montaña hasta su arquitectura inspirada en los Alpes. Explorá sus calles, su gastronomía y la magia del lago Nahuel Huapi. Un paseo visual imperdible por uno de los destinos más encantadores de la Patagonia.
       </h2>
