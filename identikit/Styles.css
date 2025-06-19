@@ -13,12 +13,12 @@
 
 
 body {
-  margin: 0;
-  font-family: var(--fuente-parrafo);
-  color: var(--color-texto);
-  background-image: url("identikit/Imagenes/fondo2.jpg");
-  background-size: cover;
-}
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--fondo);
+      color: var(--color-texto);
+    }
+
 
 /* Título */
 h1 {
