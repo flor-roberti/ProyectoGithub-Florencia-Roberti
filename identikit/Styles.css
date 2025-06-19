@@ -4,20 +4,24 @@
   --color-hover: #8cabb9;
   --fondo: #f4f6fa;
   --color-texto: #333;
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-parrafo: 'Roboto', sans-serif;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --radio: 8px;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--fuente-parrafo);
   background-color: var(--fondo);
   color: var(--color-texto);
 }
 
 /* Título */
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--fuente-titulo);
   font-weight: 800;
-  font-size: 40px;
+  font-size: 2.8rem;
   text-align: center;
   color: var(--color-primario);
   margin: 2rem 0;
@@ -26,13 +30,14 @@ h1 {
 /* NAV PRINCIPAL */
 .nav-principal {
   background-color: var(--color-primario);
-  padding: 1.2rem 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   text-align: center;
+  box-shadow: var(--sombra);
 }
 
 .nav-principal img {
@@ -72,6 +77,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   margin-top: 2rem;
+  box-shadow: var(--sombra);
+  border-radius: var(--radio);
 }
 
 .nav-secundario ul {
@@ -96,7 +103,7 @@ h1 {
   color: var(--color-hover);
 }
 
-/* FORMATO RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .nav-principal {
     flex-direction: column;
@@ -113,7 +120,7 @@ h1 {
   }
 }
 
-/* OTROS ELEMENTOS */
+/* FOOTER */
 footer {
   background-color: var(--color-primario);
   height: 50px;
@@ -123,6 +130,7 @@ footer {
   margin-top: 3rem;
 }
 
+/* ENLACES */
 a {
   text-decoration: none;
   color: var(--color-primario);
@@ -132,7 +140,7 @@ a:hover {
   color: var(--color-hover);
 }
 
-/* ANIMACIONES, MALETAS, ETC. */
+/* MALETAS Y ANIMACIONES */
 .maletas-container {
   display: flex;
   justify-content: center;
@@ -145,6 +153,8 @@ a:hover {
   transition: transform 0.3s;
   width: 200px;
   height: auto;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
 }
 
 .maleta:hover {
@@ -160,19 +170,21 @@ a:hover {
 .destino-container img {
   max-width: 300px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
 }
 
 .volver-btn {
   margin: 2rem auto;
-  padding: 0.5rem 1.2rem;
+  padding: 0.75rem 1.2rem;
   background-color: var(--color-primario);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radio);
   cursor: pointer;
   font-size: 1rem;
   display: block;
+  transition: background-color 0.3s ease;
 }
 
 .volver-btn:hover {
@@ -187,7 +199,7 @@ a:hover {
 .imagen-viva {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+  border-radius: var(--radio);
 }
 
 .imagen-viva:hover {
@@ -195,12 +207,16 @@ a:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
+/* ASIDE */
 aside {
-  background-color: var(--color-secundario);
+  background-color: white;
+  color: var(--color-texto);
   width: 20%;
-  height: 600px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.9rem;
+  height: auto;
+  font-family: var(--fuente-parrafo);
+  font-size: 0.95rem;
   padding: 1rem;
-  color: white;
+  border-left: 3px solid var(--color-secundario);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
 }
