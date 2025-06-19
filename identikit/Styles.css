@@ -11,6 +11,9 @@
   --radio: 8px;
 }
 
+body {
+  background-color: var(--fondo) !important;
+}
 
 body {
       margin: 0;
