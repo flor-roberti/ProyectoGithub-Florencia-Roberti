@@ -1,62 +1,118 @@
 <!DOCTYPE html>
-<html lang = "es"> 
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
-   <link rel="icon" href="Iconos/Icono avión" type="image/x-icon”>
-   <link rel="preconnect href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="Styles.css">
-<style> 
-   .imagen-flor {
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .imagen-flor:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajo, luego existo</title>
 
+  <!-- Favicon -->
+  <link rel="icon" href="Iconos/Icono avión" type="image/x-icon">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Estilos externos -->
+  <link rel="stylesheet" href="Styles.css">
+
+  <!-- Estilos locales para imagen -->
+  <style>
+    .imagen-flor {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 100%;
+      height: auto;
+      margin: 2rem auto;
+      display: block;
+    }
+
+    .imagen-flor:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    section h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #3a6073;
+      margin-bottom: 1rem;
+    }
+
+    .iconos a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .iconos img {
+      width: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .iconos img:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
-<body style="text-align: center;"> 
-    <nav>
-        <ul>
-          <li class="item"><a href="index.html">Inicio</a></li>
-          <li class="item"><a href="Tablas.html">Mis viajes</a></li>
-          <li class="item"><a href="Juego.html">Próximo destino</a></li>
-          <li class="item"><a href="Videos 1.html">Conocé más</a></li>
-          <li class="item"><a href="../index.html">Mis proyectos</a></li>
-        </ul>
-      </nav>
-        
-    <section> 
-    <h1> Viajo, luego existo </h1>
+<body class="clasico">
 
-    <p> "El mundo es un libro y aquellos que no viajan leen solo una página" <br> - San Agustín - </p>
+  <!-- NAV PRINCIPAL -->
+  <nav class="nav-principal">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Tablas.html">Mis viajes</a></li>
+      <li><a href="Juego.html">Próximo destino</a></li>
+      <li><a href="Videos 1.html">Conocé más</a></li>
+      <li><a href="../index.html">Mis proyectos</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <section>
+    <h1>Viajo, luego existo</h1>
+    <p>"El mundo es un libro y aquellos que no viajan leen solo una página"<br><em>- San Agustín -</em></p>
 
     <img 
-    src="Imagenes/Flor.jpg" 
-    alt="Fotografía de Florencia Roberti" 
-    width="300" 
-    class="imagen-flor">
-    <p> Soy muy inquieta y enérgica, <br> me gusta viajar y conocer lugares nuevos </p>
-   
-    <a href="https://viajeros30.com/el-mundo/america/argentina/" style="text-decoration: none"> 
-        <img src="Iconos/Lámpara.png" alt="Icono de inspiración de viajes" width="50">
-    </a>
-    <a href ="https://www.aerolineas.com.ar/promo-patagonia365"  style="text-decoration: none">
-        <img src="Iconos/Bolsa.png" alt="Icono compras de pasajes" width="50">
-    </a>
-    <a href="https://todopatagonia.net/"> 
-        <img src="Iconos/Barco.png" alt="icono de viaje" width="50">
-    </a>
-    </section>
+      src="Imagenes/Flor.jpg" 
+      alt="Fotografía de Florencia Roberti" 
+      class="imagen-flor"
+    >
 
+    <p>Soy muy inquieta y enérgica,<br>me gusta viajar y conocer lugares nuevos.</p>
+
+    <div class="iconos">
+      <a href="https://viajeros30.com/el-mundo/america/argentina/" target="_blank" rel="noopener">
+        <img src="Iconos/Lámpara.png" alt="Icono de inspiración de viajes">
+      </a>
+      <a href="https://www.aerolineas.com.ar/promo-patagonia365" target="_blank" rel="noopener">
+        <img src="Iconos/Bolsa.png" alt="Icono compras de pasajes">
+      </a>
+      <a href="https://todopatagonia.net/" target="_blank" rel="noopener">
+        <img src="Iconos/Barco.png" alt="Icono de viaje">
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Florencia Roberti - Todos los derechos reservados.
+  </footer>
 </body>
 </html>
