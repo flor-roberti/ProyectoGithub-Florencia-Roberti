@@ -1,80 +1,188 @@
 <!DOCTYPE html>
-<html lang = "es"> 
-
+<html lang="es"> 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi página web</title>
- <link rel="icon" href="Iconos/Icono avión" type="image/x-icon”>
- <link rel="preconnect href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="Styles.css">
-<style>
-section {
-    height: 600px;
-    width: 79%;
-    text-align: center;
-    display: inline-block;
-    background-color: #4ea0a0;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conocé más</title>
+  <link rel="icon" href="Iconos/Icono avión" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Styles.css">
+  <style>
+    :root {
+      --color-primario: #3a6073;
+      --color-secundario: #5781bd;
+      --color-hover: #8cabb9;
+      --fondo: #f4f6fa;
+      --color-texto: #333;
+      --color-articulo: #d7ecf9;
+    }
 
-h2 {
-    font-family: ‘Boldonse‘, system-ui; 
-    font-weight: 150;
-    font-size:15px;
-    text-align: center;
- }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--fondo);
+      color: var(--color-texto);
+    }
 
-</style>
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--color-primario);
+      text-align: center;
+      margin: 2rem 0 1rem;
+    }
+
+    main {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem 5%;
+    }
+
+    aside {
+      background-color: var(--color-secundario);
+      padding: 1.5rem;
+      border-radius: 12px;
+      color: white;
+      width: 250px;
+      min-width: 200px;
+      height: fit-content;
+    }
+
+    .nav-secundario ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem;
+    }
+
+    .nav-secundario li {
+      margin-bottom: 1rem;
+    }
+
+    .nav-secundario a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      font-size: 1.1rem;
+    }
+
+    .nav-secundario a:hover {
+      color: var(--color-hover);
+    }
+
+    section {
+      background-color: var(--color-articulo);
+      padding: 2rem;
+      flex: 1;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 1rem;
+    }
+
+    iframe {
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+
+    footer {
+      background-color: var(--color-primario);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* NAV PRINCIPAL (reutilizado) */
+    .nav-principal {
+      background-color: var(--color-primario);
+      padding: 1.2rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-principal ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-principal li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-principal li a:hover {
+      color: var(--color-hover);
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      aside {
+        width: 100%;
+      }
+
+      section {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 <body> 
   <nav class="nav-principal">
-        <ul>
-          <li class="item"><a href="index.html">Inicio</a></li>
-          <li class="item"><a href="Tablas.html">Mis viajes</a></li>
-          <li class="item"><a href="Juego.html">Próximo destino</a></li>
-          <li class="item"><a href="Videos 1.html">Conocé más</a></li>
-          <li class="item"><a href="../index.html">Mis proyectos</a></li>
-        </ul>
-      </nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="Tablas.html">Mis viajes</a></li>
+      <li><a href="Juego.html">Próximo destino</a></li>
+      <li><a href="Videos 1.html">Conocé más</a></li>
+      <li><a href="../index.html">Mis proyectos</a></li>
+    </ul>
+  </nav>
 
-    <h1> Conocé más de tu destino</h1>
+  <h1>Conocé más de tu destino</h1>
 
-    <main>     
-     <aside> 
+  <main>
+    <aside>
       <nav class="nav-secundario">
         <ul>
-        <li class="item"><a href="Videos 1.html"> 1. Bariloche </a></li>
-         </ul>
-         <br>
-          <ul>
-          <li class="item"><a href="Videos 2.html"> 2. Villa La Angostura </a></li>
-         </ul>
-         <br>
-         <ul>
-          <li class="item"><a href="Videos 3.html"> 3. San Martín <br> de los Andes</a></li>
+          <li><a href="Videos 1.html">1. Bariloche</a></li>
+          <li><a href="Videos 2.html">2. Villa La Angostura</a></li>
+          <li><a href="Videos 3.html">3. San Martín de los Andes</a></li>
         </ul>
-    </nav>
+      </nav>
+    </aside>
 
-     </aside> <!--
-    --><section>
-        <center> 
-          <br>
-          <h1 style= "font-weight: 550; font-size:30px"> Bariloche – Asombrosa ciudad suizo-alemana de Argentina </h1>
-          <br>
-
-          <h2> Este video muestra lo mejor de San Carlos de Bariloche, desde sus paisajes de montaña hasta su arquitectura inspirada en los Alpes. Explorá sus calles, su gastronomía y la magia del lago Nahuel Huapi. Un paseo visual imperdible por uno de los destinos más encantadores de la Patagonia. </h2> 
-         <br>
-        <iframe width="500" height="300" src="https://www.youtube.com/embed/YNP0D-rc9XA?si=d_38aRoYwI4678Wb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </center>
+    <section>
+      <h1>Bariloche – Asombrosa ciudad suizo-alemana de Argentina</h1>
+      <h2>
+        Este video muestra lo mejor de San Carlos de Bariloche, desde sus paisajes de montaña hasta su arquitectura inspirada en los Alpes. Explorá sus calles, su gastronomía y la magia del lago Nahuel Huapi. Un paseo visual imperdible por uno de los destinos más encantadores de la Patagonia.
+      </h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/YNP0D-rc9XA?si=d_38aRoYwI4678Wb" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-    </main>
+  </main>
 
-<footer>
-  Florencia Roberti, 2025 - All rights reserved
-</footer>
-
- </body>
- </html>
+  <footer>
+    Florencia Roberti, 2025 - Todos los derechos reservados
+  </footer>
+</body>
+</html>
