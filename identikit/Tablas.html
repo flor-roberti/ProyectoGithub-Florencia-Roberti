@@ -50,11 +50,15 @@ td img {
   margin: 1.5rem auto;   
 }
 
-    img.imagen-viva:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-    }
-
+    img.imagen-viva {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
     @media (max-width: 768px) {
       table, tr, td {
         display: block;
