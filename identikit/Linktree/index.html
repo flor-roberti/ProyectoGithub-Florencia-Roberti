@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mis proyectos - Florencia Roberti</title>
+  <link rel="icon" href="TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Iconos/icono flor" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2c5f1a316.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body.linktree {
+      margin: 0;
+      padding-top: 80px;
+      font-family: 'Roboto', sans-serif;
+      background-image: url("TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Imagenes/fondo2.jpg");
+      background-size: cover;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #3a6073;
+      display: flex;
+      flex-direction: column;    
+      align-items: center;         
+      justify-content: center;
+      padding: 1.5rem 1rem;        
+      z-index: 999;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;          
+    }
+
+    header h1 {
+      color: white;
+      margin: 0 0 0.8rem 0;       
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    header nav ul li a:hover {
+      color: #cddbea;
+    }
+
+    .linktree-contenido {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    main.linktree {
+      max-width: 700px;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 4rem;  
+    }
+
+    h2:first-of-type {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.3rem;
+    }
+
+    h2:nth-of-type(2) {
+      font-size: 1.2rem;
+      font-weight: normal;
+      margin-top: 0;
+      color: #3a6073;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-buttons a {
+      background: #5781bd;
+      color: white;
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    .social-buttons a img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .links {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .links li {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .links li a {
+      display: block;
+      background-color: #3a6073;
+      color: white;
+      padding: 1.2rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      width: 100%;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-align: center;
+    }
+
+    .links li a:hover {
+      background-color: #5781bd;
+      transform: scale(1.03);
+    }
+
+    .back-button {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    .back-button a {
+      display: inline-block;
+      background-color: #5781bd;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 3rem;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #3a6073;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #3a6073;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header nav ul {
+        gap: 1rem;
+        flex-direction: column;
+      }
+
+      .avatar {
+        width: 130px;
+        height: 130px;
+      }
+
+      h2:first-of-type {
+        font-size: 1.6rem;
+      }
+
+      h2:nth-of-type(2) {
+        font-size: 1.3rem;
+      }
+
+      .links li a,
+      .back-button a {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.9rem 1.5rem;
+      }
+
+      .links li {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body class="linktree">
+  <header>
+    <h1>Mis proyectos</h1>
+  </header>
+
+  <div class="linktree-contenido">
+    <main class="linktree">
+      <img src="TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Imagenes/Flor.jpg" alt="Imagen Florencia Roberti" class="avatar" />
+      <h2>Florencia Roberti</h2>
+      <h2>Elegí el proyecto a visitar</h2>
+
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/flor_rob?igsh=ZWZ6ZGFwM3FlMmEx&utm_source=qr" target="_blank" rel="noopener">
+          <img src="TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Iconos/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.linkedin.com/in/flor-roberti/" target="_blank" rel="noopener">
+          <img src="TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Iconos/linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+
+         <ul class="links">
+        <li><a href="TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Index.html">Identikit</a></li>
+        <li><a href="TP 2 - BLOG PERSONAL/index.html">Blog personal</a></li>
+      </ul>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 - Florencia Roberti | All rights reserved </p>
+  </footer>
+</body>
+</html>

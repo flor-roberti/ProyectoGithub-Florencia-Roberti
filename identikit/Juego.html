@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang = "es"> 
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi página web</title>
+ <link rel="icon" href="Iconos/Icono avión" type="image/x-icon”>
+ <link rel="preconnect href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="Styles.css">
+
+    <style>
+
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #9DE8DD;
+        margin: 0;
+        padding: 0;
+      }
+      h2 {
+        margin-bottom: 2rem;
+        font-family: ‘Boldonse‘, system-ui; 
+        font-weight: 800;
+        font-size:40px;
+        margin-top: 4px;
+      }
+ 
+    </style>
+
+  </head>
+
+  <body>
+     <nav>
+        <ul>
+          <li class="item"><a href="Index.html">Inicio</a></li>
+          <li class="item"><a href="../TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Tablas.html">Mis viajes</a></li>
+          <li class="item"><a href="../TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Juego.html">Próximo destino</a></li>
+          <li class="item"><a href="../TP1 IDENTIKIT - DISEÑO Y DESARROLLO WEB/Videos 1.html">Conocé más</a></li>
+          <li class="item"><a href="../Linktree.html">Mis proyectos</a></li>
+        </ul>
+      </nav>
+    <br>
+    <h1>Elegí tu próximo destino en la Patagonia</h1>
+    <br>
+    <br>
+
+    <div class="maletas-container" id="opciones">
+      <img src="Imagenes/maletaSMAcerrada.png" alt="San Martín de los Andes" class="maleta" onclick="mostrarDestino('sma')">
+      <img src="Imagenes/maletaBRCcerrada.png" alt="Bariloche" class="maleta" onclick="mostrarDestino('brc')">
+      <img src="Imagenes/maletaVLAcerrada.png" alt="Villa La Angostura" class="maleta" onclick="mostrarDestino('vla')">
+    </div>
+  
+    <div class="destino-container" id="sma">
+      <img src="Imagenes/maletaSMAabierta.png" alt="San Martín de los Andes">
+      <div class="info">
+        <h2>San Martín de los Andes</h2>
+        <p>Ubicado en la cordillera de los Andes, este destino ofrece lagos cristalinos, montañas nevadas y una atmósfera encantadora para relajarte y conectar con la naturaleza.</p>
+      </div>
+      <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </div>
+  
+    <div class="destino-container" id="brc">
+      <img src="Imagenes/maletaBCRabierta.png "Bariloche">
+      <div class="info">
+        <h2>Bariloche</h2>
+        <p>Conocido por sus chocolates, paisajes montañosos y el impresionante lago Nahuel Huapi, Bariloche es ideal tanto en invierno como en verano.</p>
+      </div>
+      <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </div>
+  
+    <div class="destino-container" id="vla">
+      <img src="Imagenes/maletaVLAabierta.png" alt="Villa La Angostura">
+      <div class="info">
+        <h2>Villa La Angostura</h2>
+        <p>Un rincón mágico de la Patagonia, famoso por sus bosques, senderos y tranquilidad. Perfecto para descansar rodeado de belleza natural.</p>
+      </div>
+      <button class="volver-btn" onclick="volverInicio()">Volver</button>
+    </div>
+  
+    <script>
+      function mostrarDestino(destinoId) {
+        document.getElementById('opciones').style.display = 'none';
+        document.querySelectorAll('.destino-container').forEach(container => {
+          container.style.display = 'none';
+        });
+        document.getElementById(destinoId).style.display = 'block';
+      }
+  
+      function volverInicio() {
+        document.querySelectorAll('.destino-container').forEach(container => {
+          container.style.display = 'none';
+        });
+        document.getElementById('opciones').style.display = 'flex';
+      }
+    </script>
+  </body>
+  </html>
+
