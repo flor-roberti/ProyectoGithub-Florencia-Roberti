@@ -12,7 +12,45 @@ h1 {
     font-weight: bold;
     font-size:20px;
  }
+nav {
+            display: flex;
+        }
+ 
+        ul {
+          justify-content: space-evenly;
+          list-style: none;
+          width: 100%;
+          padding: 0; 
+          margin: 0;
+        }
+ 
+        li {
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+ 
+        nav ul li a {
+  white-space: nowrap;
+}
 
+ html {
+  scroll-behavior: smooth;
+    }
+
+  @media (max-width: 600px) {
+            ul {
+                flex-direction: column;
+            }
+ 
+            li {
+                width: 100vw;
+                height: 2rem;
+                margin: 0;
+                margin-bottom: 10px;
+                text-align: center;
+            }
+             }
  nav {
   display: flex;
   align-items: center;        
