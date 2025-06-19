@@ -15,8 +15,9 @@
 body {
   margin: 0;
   font-family: var(--fuente-parrafo);
-  background-color: var(--fondo);
   color: var(--color-texto);
+  background-image: url("identikit/Imagenes/fondo2.jpg");
+  background-size: cover;
 }
 
 /* Título */
