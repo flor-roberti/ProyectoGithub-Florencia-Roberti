@@ -4,11 +4,13 @@
   --color-hover: #8cabb9;
   --fondo: #f4f6fa;
   --color-texto: #333;
+  --color-texto: #333;
   --fuente-titulo: 'Playfair Display', serif;
   --fuente-parrafo: 'Roboto', sans-serif;
   --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
   --radio: 8px;
 }
+
 
 body {
   margin: 0;
@@ -32,22 +34,15 @@ h1 {
   background-color: var(--color-primario);
   padding: 1.5rem 1rem;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   text-align: center;
   box-shadow: var(--sombra);
-}
-
-.nav-principal img {
-  height: 60px;
 }
 
 .nav-principal ul {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
   margin: 0;
   padding: 0;
@@ -68,6 +63,7 @@ h1 {
 .nav-principal a:hover {
   color: var(--color-hover);
 }
+
 
 /* NAV SECUNDARIO */
 .nav-secundario {
