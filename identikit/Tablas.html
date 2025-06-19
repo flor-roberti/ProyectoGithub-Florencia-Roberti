@@ -2,16 +2,75 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mis viajes por el sur</title>
   <link rel="icon" href="Iconos/Icono avión" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Styles.css">
-</head>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--fondo);
+      color: var(--color-texto);
+    }
 
-<body class="clasico">
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      color: var(--color-primario);
+      margin: 2rem 0;
+    }
+
+    table {
+      width: 90%;
+      margin: 2rem auto;
+      border-collapse: separate;
+      border-spacing: 0 2rem;
+    }
+
+    td {
+      vertical-align: top;
+      padding: 1rem;
+      background-color: var(--color-articulo);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    img.imagen-viva {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img.imagen-viva:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    td h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--color-primario);
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 768px) {
+      table, tr, td {
+        display: block;
+        width: 100%;
+      }
+
+      td {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
   <nav class="nav-principal">
     <ul>
       <li><a href="index.html">Inicio</a></li>
@@ -22,28 +81,51 @@
     </ul>
   </nav>
 
-  <main class="articles">
-    <article>
-      <h2>Bariloche</h2>
-      <img src="Imagenes/Bariloche.jpg" alt="Foto de Bariloche" class="imagen-viva" width="300">
-      <p>Bariloche es la ciudad más grande de la Patagonia andina, famosa por su chocolate, su vida nocturna y el Cerro Catedral, el centro de esquí más importante de Sudamérica. Rodeada de lagos y montañas, ofrece trekking, navegación y una gastronomía única, combinando naturaleza y diversión todo el año.</p>
-    </article>
+  <h1>Mis viajes por el sur</h1>
 
-    <article>
-      <h2>Villa La Angostura</h2>
-      <img src="Imagenes/Villa LA.webp" alt="Foto de Villa La Angostura" class="imagen-viva" width="300">
-      <p>Villa La Angostura es un pintoresco destino patagónico, rodeado de montañas, bosques y el Lago Nahuel Huapi. Ideal para disfrutar de actividades al aire libre como trekking, pesca y esquí.</p>
-    </article>
+  <table>
+    <tr>
+      <td>
+        <h2>Bariloche</h2>
+        <p>Bariloche es la ciudad más grande de la Patagonia andina, famosa por su chocolate, su vida nocturna y el Cerro Catedral. Rodeada de lagos y montañas, ofrece trekking, navegación y gastronomía todo el año.</p>
+      </td>
+      <td>
+        <img src="Imagenes/Bariloche.jpg" alt="Foto de Bariloche" class="imagen-viva">
+      </td>
+      <td>
+        <p>Actividades: ski, caminatas por Circuito Chico, navegación en el Lago Nahuel Huapi, visita al Cerro Otto y su confitería giratoria.</p>
+      </td>
+    </tr>
 
-    <article>
-      <h2>San Martín de los Andes</h2>
-      <img src="Imagenes/San Martin de los Andes.jpg" alt="Foto de San Martín de los Andes" class="imagen-viva" width="300">
-      <p>San Martín de los Andes destaca por su ambiente vibrante, su cercanía a la Ruta de los Siete Lagos y el Parque Nacional Lanín. Ideal para actividades como mountain bike, kayak y explorar su variada oferta gastronómica y cultural.</p>
-    </article>
-  </main>
+    <tr>
+      <td>
+        <h2>Villa La Angostura</h2>
+        <p>Una villa encantadora entre lagos, bosques y montañas. Perfecta para relajarse y conectarse con la naturaleza.</p>
+      </td>
+      <td>
+        <img src="Imagenes/Villa LA.webp" alt="Foto de Villa La Angostura" class="imagen-viva">
+      </td>
+      <td>
+        <p>Actividades: playa en Bahía Brava, trekking al Bosque de Arrayanes, y deportes acuáticos en el Lago Correntoso.</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <h2>San Martín de los Andes</h2>
+        <p>Colorido y vibrante, ideal para los que buscan naturaleza y cultura. Punto de partida para la Ruta de los 7 Lagos.</p>
+      </td>
+      <td>
+        <img src="Imagenes/San Martin de los Andes.jpg" alt="Foto de San Martín de los Andes" class="imagen-viva">
+      </td>
+      <td>
+        <p>Actividades: kayak en el lago Lacar, subida al volcán Lanín, mountain bike y gastronomía regional.</p>
+      </td>
+    </tr>
+  </table>
 
   <footer>
-    <p>&copy; 2025 Florencia Roberti - Todos los derechos reservados</p>
+    <p>&copy; 2025 Florencia Roberti</p>
   </footer>
 </body>
 </html>
