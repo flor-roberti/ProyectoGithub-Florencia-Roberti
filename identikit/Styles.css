@@ -67,38 +67,6 @@ h1 {
 
 
 /* NAV SECUNDARIO */
-.nav-secundario {
-  background-color: var(--color-secundario);
-  padding: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  box-shadow: var(--sombra);
-  border-radius: var(--radio);
-}
-
-.nav-secundario ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-secundario li {
-  margin: 0.8rem 0;
-}
-
-.nav-secundario li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.nav-secundario li a:hover {
-  color: var(--color-hover);
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
