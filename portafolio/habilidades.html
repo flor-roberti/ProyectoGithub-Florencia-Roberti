@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habilidades</title>
+
+  <link rel="icon" href="iconos/idea.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body onload="animarBarras()">
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="sobre-mi.html">Sobre mí</a></li>
+        <li><a href="habilidades.html" class="activo">Habilidades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li> <a href="../linktree.html">Mis proyectos</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main class="habilidades">
+    <h1>Habilidades Técnicas</h1>
+
+    <div class="skills-grid">
+      <div class="skill">
+        <span>HTML</span>
+        <div class="barra"><div class="progreso" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <span>CSS</span>
+        <div class="barra"><div class="progreso" data-width="85%"></div></div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="barra"><div class="progreso" data-width="70%"></div></div>
+      </div>
+      <div class="skill">
+        <span>GitHub</span>
+        <div class="barra"><div class="progreso" data-width="75%"></div></div>
+      </div>
+    </div>
+
+    <section class="educacion">
+      <h2>Educación</h2>
+      <p>Técnica de Marketing | Universidad Argentina de la Empresa </p>
+    </section>
+
+    <section class="educacion">
+      <h2>Desarrollo profesional</h2>
+      <p> Customer Experience representative | Mercado Libre </p>
+    </section>
+  </main>
+
+ <footer>
+    <div class="footer-container">
+      <div class="redes">
+        <a href="https://www.linkedin.com/in/flor-roberti" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/flor-roberti" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p>&copy; 2025 Florencia Roberti | All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function animarBarras() {
+      const barras = document.querySelectorAll('.progreso');
+      barras.forEach(barra => {
+        const porcentaje = barra.getAttribute('data-width');
+        barra.style.width = porcentaje;
+      });
+    }
+  </script>
+</body>
+</html>
