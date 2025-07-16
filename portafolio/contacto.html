@@ -8,6 +8,7 @@
   <link rel="icon" href="iconos/idea.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css" />
+  <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script> <!-- si usás íconos FontAwesome -->
 </head>
 
 <body>
@@ -19,7 +20,6 @@
         <li><a href="habilidades.html">Habilidades</a></li>
         <li><a href="contacto.html" class="activo">Contacto</a></li>
         <li><a href="../index.html">Mis proyectos</a></li>
-
       </ul>
     </nav>
   </header>
@@ -28,11 +28,15 @@
     <h1>Contacto</h1>
     <p class="intro">¿Querés trabajar conmigo o tenés alguna consulta? Completá el formulario y te respondo lo antes posible.</p>
 
-    <form action="https://formsubmit.co/tucorreo@example.com" method="POST">
+    <form id="formulario-contacto" action="https://formsubmit.co/ajax/tucorreo@example.com" method="POST">
       <input type="text" name="name" placeholder="Tu nombre" required />
       <input type="email" name="email" placeholder="Tu correo electrónico" required />
       <textarea name="message" placeholder="Tu mensaje" rows="5" required></textarea>
       <button type="submit" class="boton">Enviar mensaje</button>
+
+      <p id="mensaje-enviado" style="display: none; color: green; margin-top: 10px;">
+        ¡Mensaje enviado correctamente! Gracias por contactarme.
+      </p>
     </form>
   </main>
 
@@ -45,5 +49,32 @@
       <p>&copy; 2025 Florencia Roberti | All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Script para manejar envío -->
+  <script>
+    const formulario = document.getElementById('formulario-contacto');
+    const mensaje = document.getElementById('mensaje-enviado');
+
+    formulario.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const data = new FormData(formulario);
+
+      const response = await fetch(formulario.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        mensaje.style.display = 'block';
+        formulario.reset();
+      } else {
+        alert("Hubo un error al enviar el mensaje. Intentá nuevamente.");
+      }
+    });
+  </script>
 </body>
 </html>
